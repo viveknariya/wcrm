@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Templates() {
+export default function BulkSender() {
   const pathname = usePathname();
 
   const getClassName = (path) => {
@@ -15,22 +15,12 @@ export default function Templates() {
           <ul className="mt-14 space-y-1">
             <li>
               <Link
-                href="/dashboard/templates/listoftemplates"
+                href="/dashboard/bulksender/selecttemplate"
                 className={`${getClassName(
-                  "/dashboard/templates/listoftemplates"
+                  "/dashboard/bulksender/selecttemplate"
                 )} block rounded-lg px-4 py-2 text-sm font-medium text-gray-700`}
               >
-                List Of Templates
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/dashboard/templates/createtemplates"
-                className={`${getClassName(
-                  "/dashboard/templates/createtemplates"
-                )} block rounded-lg px-4 py-2 text-sm font-medium text-gray-700`}
-              >
-                Create Templates
+                Select Template
               </Link>
             </li>
           </ul>
